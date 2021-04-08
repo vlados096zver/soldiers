@@ -1,0 +1,79 @@
+@import 'responsive'
+
+.mailing
+	padding-top: 54px
+	margin-bottom: 45px	
+	+media(md)
+		padding-top: 35px
+
+	&--inner
+		margin-bottom: 60px
+
+	&__wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+		background-color: #eeeeee
+		padding: 22px
+		padding-bottom: 0px
+		+media(md)
+			flex-direction: column
+			align-items: flex-start
+
+	&__desc
+		max-width: 390px
+		margin-right: 15px
+		margin-bottom: 22px
+		+media(md)
+			max-width: 100%
+			margin-right: 0
+		+media(xs)
+			max-width: 100%	
+
+		p
+			font-size: 16px
+			line-height: 1.5
+			color: #000
+			+media(xs)
+				text-align: center
+			span
+				display: block
+				font-weight: 700
+
+	&__inner
+		display: flex
+		flex-wrap: wrap
+		width: calc(100% - 510px)
+		justify-content: flex-end
+		align-items: center
+		+media(lgxs)
+			justify-content: center
+			width: calc(100% - 420px)
+		+media(md)
+			width: 100%
+		+media(xs)
+			flex-direction: column
+
+	&__error
+		width: 100%
+		color: #8b0000
+		text-transform: uppercase
+		padding-bottom: 15px
+		font-weight: bold
+
+	&__input
+		display: block
+		width: calc(100% - 265px)	
+		color: #808080
+		border: none
+		border-radius: 5px
+		outline: none
+		padding: 13px 20px
+		margin-right: 20px
+		margin-bottom: 22px
+		+media(xs)
+			width: 100%
+			margin-right: 0px
+		&::placeholder
+			font-size: 16px
+			color: #808080

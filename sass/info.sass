@@ -1,0 +1,54 @@
+@import 'responsive'
+
+.info
+	&__content
+		background-color: #e8e8e8
+		padding-top: 25px
+
+	&__elem
+		display: flex
+		flex-wrap: wrap
+		justify-content: flex-start
+		margin: 0 -15px
+		+media(md)
+			justify-content: center
+		+media(sm)
+			margin: 0px
+
+	&__item	
+		margin: 0 15px
+		margin-bottom: 15px
+		+media(md)
+			width: calc(100% / 3 - 30px)
+			margin-bottom: 25px
+		+media(xs)
+			width: calc(100% / 2 - 30px)
+		+media(sm)
+			margin-bottom: 25px
+
+		&:nth-child(4)
+			margin-left: auto
+			+media(md)
+				margin-left: 15px
+		svg
+			display: block
+			width: 30px
+			height: 30px
+			fill: #e40108
+			margin: 0 auto
+			margin-bottom: 16px
+			transition: 0.3s fill
+
+		&:hover
+			svg
+				fill: #41307e
+				
+			.info__title
+				color: #41307e
+
+	&__title
+		font-size: 12px
+		color: #e40108
+		text-transform: uppercase
+		text-align: center
+		transition: 0.3s color

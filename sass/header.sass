@@ -1,0 +1,277 @@
+@import 'responsive'
+
+.main-header
+	position: relative
+	margin-bottom: 35px
+	&__block
+		background-color: #534195
+
+	&__holder
+		display: flex
+		justify-content: space-between
+		padding-top: 12px
+		+media(smx)
+			flex-direction: column
+			align-items: center
+
+	&__logo
+		position: absolute
+		display: block
+		top: 0px
+		left: 50%
+		width: 220px
+		height: 220px
+		transform: translateX(-50%)
+		background-color: #e8e8e8
+		box-shadow: 0 10px 7px rgba(0, 0, 0, 0.2)
+		border-radius: 0 0 50% 50%
+		+media(lgxs)
+			position: static
+			left: initial
+			transform: none
+			width: 145px
+			height: 145px
+			margin: 0 auto
+			margin-bottom: 25px
+		img
+			display: block
+			margin: 0 auto
+			+media(lgxs)
+				height: calc(100% - 20px)
+
+	&__row
+		display: flex
+		align-items: center
+		+media(smx)
+			flex-wrap: wrap
+			justify-content: center
+		+media(mini)
+			flex-direction: column
+
+	&__col
+		display: flex
+		align-items: center
+		margin-bottom: 12px
+		&:not(:last-child)
+			margin-right: 15px
+			+media(mini)
+				margin-right: 0px
+		svg
+			display: block
+			width: 20px
+			height: 20px
+			fill: #fff
+			margin-right: 15px
+
+
+	&__tel,
+	&__mail
+		color: #fff
+
+	&__tel
+		font-size: 14px
+
+	&__mail
+		font-size: 12px
+
+	&__inner
+		display: flex
+
+	&__socials
+		display: flex
+		padding-right: 30px
+
+	&__box
+		margin: 0 7px
+		margin-bottom: 12px
+		svg
+			width: 20px
+			height: 20px
+			fill: #fff
+			transition: 0.3s fill
+			&:hover
+				fill: rgba(255, 255, 255, 0.7)
+
+	&__elem
+		background-color: #41307e
+
+	&__content
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 10px 0
+
+	&__list
+		display: flex
+		+media(sm)
+			display: none
+			width: 100%
+			top: 100%
+			left: 0
+			z-index: 5
+			position: absolute
+			padding-top: 10px
+			padding-left: 15px
+			max-height: calc(100vh - 70px)
+			overflow-y: auto
+			overflow-x: hidden
+			background-color: #41307e
+		li:not(:last-child)
+			margin-right: 35px
+			+media(lgs)
+				margin-right: 30px
+			+media(md)
+				margin-right: 25px
+			+media(sm)
+				margin-right: 0px
+
+	&__link
+		position: relative
+		display: block
+		font-size: 14px
+		line-height: 1.2
+		color: #fff
+		text-transform: uppercase
+		font-weight: 700
+		+media(sm)
+			display: inline-block
+			margin-bottom: 15px
+		&:after
+			position: absolute
+			content: ' '
+			opacity: 0
+			left: 0px
+			bottom: -4px
+			width: 0%
+			height: 2px
+			background-color: #fff
+			transition: 0.5s width, 0.5s opacity
+
+		&:hover:after
+			opacity: 1
+			width: 100%
+
+	&__search-wrap
+		max-width: 300px
+		width: 100%
+		display: flex
+		justify-content: space-between
+		border-radius: 5px
+		background-color: #675998
+		+media(sm)
+			max-width: 100%	
+
+	&__input
+		display: block
+		width: 100%
+		outline: none
+		border: none
+		border-radius: 5px
+		color: #fff
+		font-size: 12px
+		background-color: inherit
+		padding: 8px 15px
+		padding-bottom: 7px
+		&::placeholder
+			font-size: 12px
+			color: #fff
+
+	&__button
+		display: block
+		cursor: pointer
+		width: 30px
+		height: 30px
+		background-color: inherit
+		background-image: url(img/icons/search.svg)
+		background-repeat: no-repeat
+		background-size: 16px
+		background-position: center
+		padding: 0px
+		outline: none
+		border: none
+
+.mobile-wrap
+	display: none
+	align-items: center
+	justify-content: space-between
+	cursor: pointer
+	+media(sm)
+		display: flex
+		width: 100%
+		padding: 5px 0px
+		margin-right: 20px
+
+.line-burger
+	display: block
+	position: absolute
+	top: 50%
+	left: 0
+	width: 25px
+	height: 3px
+	background-color: #fff
+	transition: 0.5s width
+	&:after,
+	&:before
+		content: ''
+		position: absolute
+		width: 25px
+		height: 3px
+		background-color: #fff
+		left: 0
+		transition: 0.5s
+	&:after
+		top: calc(100% + 5px)
+	&:before
+		bottom: calc(100% + 5px)
+
+.line-active
+	width: 0
+	&:after
+		top: 9px
+		transform: rotate(-45deg)
+		transform-origin: 0 0
+	&:before
+		bottom: 9px
+		transform: rotate(45deg)
+		transform-origin: 0 100%
+
+.main-nav__toggle
+	position: relative
+	cursor: pointer
+	display: none
+	width: 25px
+	height: 25px
+	margin-top: -5px
+	+media(sm)
+		display: block
+
+.language-chooser
+	display: flex
+	align-items: center
+	margin-bottom: 12px
+	li
+		font-size: 14px
+		line-height: 1.7
+		padding: 0px 10px
+		text-transform: uppercase
+		&:not(:last-child)
+			position: relative
+			&:after
+				position: absolute
+				content: '|'
+				color: #fff
+				top: 0px
+				right: 0px
+		&:first-child
+			padding-left: 0px
+		&:last-child
+			padding-right: 0px
+		a
+			color: #fff
+			&:hover
+				text-decoration: underline
+				
+		&.active a
+			font-weight: 700
+			&:hover
+				text-decoration: none

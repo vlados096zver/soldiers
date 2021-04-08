@@ -1,0 +1,208 @@
+@import 'responsive'
+
+.news
+	padding-top: 10px
+	margin-top: -30px
+	margin-bottom: 25px
+
+	&--page
+		.news__wrap
+			flex-wrap: wrap
+			padding: 0px
+			margin-top: 40px
+
+		.news__item	
+			width: calc(100% / 3 - 40px)
+			height: initial
+			border: none
+			margin: 0 20px
+			margin-bottom: 50px
+			+media(mdx)
+				width: calc(100% / 2 - 40px)
+			+media(sm)
+				width: 100%
+				max-width: 500px
+				margin: 0px auto
+				margin-bottom: 45px
+
+		.news__pic
+			width: 100%
+			margin-top: 0px
+
+	&--single
+		padding-top: 0px
+		margin-bottom: 40px
+
+	&--man
+		padding-top: 0px
+		margin-top: 50px
+		margin-bottom: 60px
+
+	&__wrap
+		display: flex
+		margin: 0 -20px
+		padding: 0 20px
+		+media(sm)
+			margin: 0px
+
+	&__item
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: flex-start
+		height: 100%	
+		border: 3px solid transparent
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)
+		+media(sm)
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+		&--all
+			align-items: center
+			border: 3px solid #e9e9e9
+			box-shadow: none
+
+		a
+			display: block
+			outline: none
+			position: relative
+
+	&__row
+		padding: 0 20px
+
+	&__pic
+		display: block
+		width: calc(100% + 6px)
+		padding-top: 62%
+		background-repeat: no-repeat
+		background-size: cover
+		margin-top: -3px	
+
+	&__title		
+		font-size: 16px
+		line-height: 1.85
+		color: #000000
+		padding-bottom: 20px
+
+	&__content
+		display: flex
+		flex-direction: column
+		padding: 30px 25px
+		padding-top: 27px	
+		padding-bottom: 17px
+		height: 100%
+		+media(sm)
+			padding: 25px 12px
+			padding-bottom: 17px
+
+	&__text
+		display: block
+		padding-bottom: 30px
+		p
+			font-size: 14px
+			line-height: 1.7
+			color: #767676
+
+	&__inner
+		display: flex
+		flex-wrap: wrap
+		margin-top: auto
+
+	&__logo
+		margin-bottom: 45px
+		img
+			width: 64px
+			height: 64px
+			display: block
+			margin: 0 auto
+
+	&__desc
+		max-width: 200px
+		margin: 0 auto
+		padding-bottom: 50px
+		p
+			font-size: 24px
+			line-height: 1.25
+			color: #979797
+			text-transform: uppercase
+			text-align: center
+			font-weight: 200
+
+	&__count
+		font-size: 16px
+		color: #41307e
+		text-align: center
+		text-transform: uppercase
+		font-weight: 700
+
+	.slick-track
+		display: flex
+		padding: 30px 0
+		height: 100%
+
+	.slick-initialized .slick-slide
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: flex-start
+		outline: none
+		padding: 0px	
+		margin: 0 20px
+		+media(sm)
+			margin: 0px 10px
+
+		&.news__item--all
+			justify-content: center
+
+	&__arrows
+		max-width: calc(50% - 40px)
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		+media(mdx)
+			justify-content: center
+			max-width: initial
+
+	&__block
+		position: relative
+				
+	&__arrow
+		position: absolute
+		display: block
+		cursor: pointer
+		outline: none
+		border: none
+		background-color: transparent
+		width: 40px
+		height: 40px
+		padding: 0px
+		top: calc(50% - 20px)
+		+media(lgm)
+			width: 30px
+			height: 30px
+			top: calc(50% - 15px)
+		&:after
+			position: absolute
+			content: ' '
+			width: 24px
+			height: 24px
+			top: calc(50% - 12px)
+			left: calc(50% - 10px)
+			border-left: 2px solid #41307e
+			border-top: 2px solid #41307e
+			transform: rotate(-45deg)
+			transition: 0.3s border
+		&:hover:after
+			border-color: rgba(65, 48, 126, 0.6)
+		&--dir_left
+			left: -30px
+			+media(lgm)
+				left: -10px
+			+media(sm)
+				left: -5px
+
+		&--dir_right
+			transform: scaleX(-1)
+			right: -30px
+			+media(lgm)
+				right: -10px
+			+media(sm)
+				right: -5px

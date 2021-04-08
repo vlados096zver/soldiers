@@ -1,0 +1,154 @@
+@import 'responsive'
+
+.result
+	&__wrap
+		background-color: #f2f2f2
+
+		&.loader__content
+			position: relative
+			background-image: none
+			animation: none
+			height: 50px
+			&:after
+				content: ''
+				position: absolute
+				top: calc(50% - 15px)
+				right: calc(50% - 15px)
+				width: 30px
+				height: 30px
+				background-image: url(img/icons/loader.svg)
+				background-repeat: no-repeat
+				background-size: 30px
+				background-position: center
+				animation: loader 1s infinite linear
+
+	&__item
+		display: block
+		width: 100%
+		font-size: 16px
+		color: #333333
+		padding: 16px 30px
+		padding-bottom: 15px
+		&:nth-child(odd)
+			background-color: #e1e1e1
+
+		&:nth-child(even)
+			background-color: #f2f2f2
+
+	&__row
+		background-color: #f2f2f2
+		padding: 0 30px
+		padding-top: 25px
+		padding-bottom: 35px
+
+	&__show
+		font-size: 16px
+		color: #808080
+		padding-bottom: 26px
+		span
+			color: #41307e
+			font-weight: 700
+
+	&__link
+		font-size: 18px
+		color: #41307e
+		text-transform: uppercase
+		font-weight: 700
+		transition: 0.3s color
+		&:hover
+			color: #140f26
+
+	&__box
+		display: flex
+		justify-content: center
+		flex-direction: column
+		padding: 0 20px
+		margin-top: 80px
+		+media(md)
+			display: none
+
+	&__elem
+		display: inline-block
+		max-width: fit-content
+		margin: 0 auto
+		margin-bottom: 42px
+		&:hover 
+			svg, 
+				fill: #140f26
+
+			.result__title
+				color: #140f26
+		svg
+			display: block
+			width: 64px
+			height: 64px
+			margin: 0 auto
+			margin-bottom: 32px
+			fill: #41307e
+			transition: 0.3s fill
+
+	&__title
+		font-size: 18px
+		color: #41307e
+		text-align: center
+		font-weight: 700
+		transition: 0.3s color
+
+	&__block
+		display: flex
+		align-items: flex-end
+		justify-content: space-between
+
+	&__value,
+	&__need
+		font-size: 18px
+		padding-bottom: 18px
+		font-weight: 700
+
+	&__value
+		color: #41307e
+
+	&__need
+		color: #7c7c7c
+
+	&__text
+		font-size: 14px
+		color: #808080
+		padding-bottom: 13px
+		font-weight: normal
+
+	&__all
+		font-size: 16px
+		color: #7c7c7c
+		text-align: center
+		padding-top: 5px
+		padding-bottom: 42px
+		span
+			color: #333333
+			font-weight: 700
+
+	&__holder
+		display: flex
+		align-items: center
+		justify-content: space-between
+		flex-wrap: wrap
+		.btn--result
+			margin-bottom: 15px
+
+	&__icons
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -12px
+		padding-right: 20px
+		margin-bottom: 15px
+
+	&__col
+		margin: 0 12px
+		svg
+			display: block
+			width: 30px
+			height: 30px
+			fill: #41307e
+			transition: 0.3s fill
+			&:hover
+				fill: #140f26

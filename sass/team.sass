@@ -1,0 +1,114 @@
+@import 'responsive'
+
+.team
+	padding-bottom: 5px
+	+media(md)
+		padding-bottom: 0px
+	&--single
+		.title--news
+			padding-bottom: 12px
+
+		.team__image
+			margin-bottom: 45px
+
+		.team__position
+			font-size: 24px
+			color: #808080
+			text-transform: uppercase
+			font-weight: 700
+
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -20px
+		margin-top: 35px
+
+	&__item
+		width: calc(100% / 3 - 40px)
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2)
+		margin: 0 20px
+		margin-bottom: 45px
+		+media(md)
+			margin-bottom: 40px
+
+	&__image
+		background-color: #f2f2f2
+		padding: 15px 0
+		img
+			display: block
+			width: 200px
+			height: 200px
+			border-radius: 50%
+			margin: 0 auto
+
+	&__text
+		padding: 26px 25px
+		padding-bottom: 32px
+
+	&__fio
+		font-size: 16px
+		color: #000
+		padding-bottom: 20px
+		font-weight: 700
+
+	&__position
+		font-size: 16px
+		color: #808080
+		padding-bottom: 33px
+
+	&__desc
+		padding-bottom: 30px
+		p
+			font-size: 14px
+			line-height: 1.7
+			color: #767676
+
+	&__content
+		p
+			font-size: 16px
+			line-height: 1.5
+			color: #333333
+			padding-bottom: 2.5em
+
+		h1
+			font-size: 38px
+
+		h2
+			font-size: 34px
+
+		h3
+			font-size: 30px
+
+		h4
+			font-size: 26px
+
+		h5
+			font-size: 22px
+
+		h6
+			font-size: 16px
+
+		h1, h2, h3, h4, h5, h6
+			line-height: 1.2
+			color: #bd362f
+			text-transform: uppercase
+			font-weight: bold
+			padding-bottom: 40px
+
+		ul
+			margin: 1em 0
+			li
+				list-style-type: disc
+				list-style-position: inside
+				line-height: 1.7
+				margin-bottom: 5px
+				padding-left: 20px
+
+		ol
+			margin: 1em 0
+			li
+				list-style-type: decimal
+				list-style-position: inside
+				line-height: 1.7
+				margin-bottom: 5px
+				padding-left: 20px

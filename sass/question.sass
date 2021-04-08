@@ -1,0 +1,78 @@
+@import 'responsive'
+
+.question
+	.data__label
+		line-height: 1.5
+
+	&__block
+		font-size: 16px
+		line-height: 1.5
+		background-color: #fff
+		color: #000
+		border-radius: 5px
+		padding: 12px 0px
+		margin-bottom: 15px
+		font-weight: 700
+		span
+			display: block
+			padding-top: 2px
+			font-weight: normal
+
+	&__error
+		color: #d93025
+		text-transform: uppercase
+		padding-bottom: 20px
+		font-weight: bold
+
+	&__holder
+		padding-top: 8px
+
+	&__col
+		display: flex
+		margin-bottom: 16px
+
+	&__label
+		cursor: pointer
+		user-select: none
+		position: relative
+		display: inline-block
+		border-radius: 4px
+		padding: 2px 0
+		padding-left: 35px
+		&:after,
+		&:before
+			position: absolute
+			content: ' '
+
+		&:after
+			top: 0px
+			left: 0px
+			width: 25px
+			height: 25px
+			border: 2px solid #1B58B1
+			border-radius: 4px
+			transition: 0.3s background-color
+
+		&:before
+			z-index: 3
+			font-size: 14px
+			border-color: #fff
+			border-style: solid
+			border-width: 0 .15em .15em 0
+			top: calc(50% - 1px)
+			left: 7px
+			transform: rotate(45deg) translate(-50%,-50%)
+			width: .6em
+			height: 1.0em
+			opacity: 0
+			visibility: hidden
+			transition: 0.3s visibility, 0.3s opacity
+
+	&__input
+		display: none
+		&:checked + .question__label:before		
+			opacity: 1
+			visibility: visible
+
+		&:checked + .question__label:after
+			background-color: #1B58B1

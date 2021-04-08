@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Revived Soldiers</title>
+
+	<link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<svg class="svg-about">
+	<g id="icon-phone">
+		<path d="M353.188 252.052c-23.51 0-46.594-3.677-68.469-10.906-10.719-3.656-23.896-.302-30.438 6.417l-43.177 32.594c-50.073-26.729-80.917-57.563-107.281-107.26l31.635-42.052c8.219-8.208 11.167-20.198 7.635-31.448-7.26-21.99-10.948-45.063-10.948-68.583C132.146 13.823 118.323 0 101.333 0h-70.52C13.823 0 0 13.823 0 30.813 0 225.563 158.438 384 353.188 384c16.99 0 30.813-13.823 30.813-30.813v-70.323c-.001-16.989-13.824-30.812-30.813-30.812z"/>
+	</g>
+	<g id="icon-email">
+		<path d="M467 76H45C20.137 76 0 96.262 0 121v270c0 24.885 20.285 45 45 45h422c24.655 0 45-20.03 45-45V121c0-24.694-20.057-45-45-45zm-6.302 30L287.82 277.967c-8.5 8.5-19.8 13.18-31.82 13.18s-23.32-4.681-31.848-13.208L51.302 106h409.396zM30 384.894V127.125L159.638 256.08 30 384.894zM51.321 406l129.587-128.763 22.059 21.943c14.166 14.166 33 21.967 53.033 21.967s38.867-7.801 53.005-21.939l22.087-21.971L460.679 406H51.321zM482 384.894L352.362 256.08 482 127.125v257.769z"/>
+	</g>
+	<g id="icon-facebook">
+		<path id="icon-facebook" d="M448,0H64C28.7,0,0,28.7,0,64v384c0,35.3,28.7,64,64,64h192V336h-64v-80h64v-64c0-53,43-96,96-96h64v80h-32
+	c-17.7,0-32-1.7-32,16v64h80l-32,80h-48v176h96c35.3,0,64-28.7,64-64V64C512,28.7,483.3,0,448,0z"/>
+	</g>
+	<g id="icon-instagram">
+		<path d="m373.40625 0h-234.8125c-76.421875 0-138.59375 62.171875-138.59375 138.59375v234.816406c0 76.417969 62.171875 138.589844 138.59375 138.589844h234.816406c76.417969 0 138.589844-62.171875 138.589844-138.589844v-234.816406c0-76.421875-62.171875-138.59375-138.59375-138.59375zm108.578125 373.410156c0 59.867188-48.707031 108.574219-108.578125 108.574219h-234.8125c-59.871094 0-108.578125-48.707031-108.578125-108.574219v-234.816406c0-59.871094 48.707031-108.578125 108.578125-108.578125h234.816406c59.867188 0 108.574219 48.707031 108.574219 108.578125zm0 0"/>
+		<path d="m256 116.003906c-77.195312 0-139.996094 62.800782-139.996094 139.996094s62.800782 139.996094 139.996094 139.996094 139.996094-62.800782 139.996094-139.996094-62.800782-139.996094-139.996094-139.996094zm0 249.976563c-60.640625 0-109.980469-49.335938-109.980469-109.980469 0-60.640625 49.339844-109.980469 109.980469-109.980469 60.644531 0 109.980469 49.339844 109.980469 109.980469 0 60.644531-49.335938 109.980469-109.980469 109.980469zm0 0"/>
+		<path d="m399.34375 66.285156c-22.8125 0-41.367188 18.558594-41.367188 41.367188 0 22.8125 18.554688 41.371094 41.367188 41.371094s41.371094-18.558594 41.371094-41.371094-18.558594-41.367188-41.371094-41.367188zm0 52.71875c-6.257812 0-11.351562-5.09375-11.351562-11.351562 0-6.261719 5.09375-11.351563 11.351562-11.351563 6.261719 0 11.355469 5.089844 11.355469 11.351563 0 6.257812-5.09375 11.351562-11.355469 11.351562zm0 0"/>
+	</g>
+	<g id="icon-youtube">
+		<path d="M365.257 67.393H95.744C42.866 67.393 0 110.259 0 163.137v134.728c0 52.878 42.866 95.744 95.744 95.744h269.513c52.878 0 95.744-42.866 95.744-95.744V163.137c0-52.878-42.866-95.744-95.744-95.744zm-64.751 169.663l-126.06 60.123c-3.359 1.602-7.239-.847-7.239-4.568V168.607c0-3.774 3.982-6.22 7.348-4.514l126.06 63.881c3.748 1.899 3.683 7.274-.109 9.082z" />
+	</g>
+	<g id="icon-twitter">
+		<path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z"/>
+	</g>
+	<g id="icon-help">
+		<path d="M248.158 343.22c-14.639 0-26.491 12.2-26.491 26.84 0 14.291 11.503 26.84 26.491 26.84s26.84-12.548 26.84-26.84c0-14.64-12.199-26.84-26.84-26.84zM252.69 140.002c-47.057 0-68.668 27.885-68.668 46.708 0 13.595 11.502 19.869 20.914 19.869 18.822 0 11.154-26.84 46.708-26.84 17.429 0 31.372 7.669 31.372 23.703 0 18.824-19.52 29.629-31.023 39.389-10.108 8.714-23.354 23.006-23.354 52.983 0 18.125 4.879 23.354 19.171 23.354 17.08 0 20.565-7.668 20.565-14.291 0-18.126.35-28.583 19.521-43.571 9.411-7.32 39.04-31.023 39.04-63.789s-29.629-57.515-74.246-57.515z"/>
+		<path d="M256 0C114.516 0 0 114.497 0 256v236c0 11.046 8.954 20 20 20h236c141.483 0 256-114.497 256-256C512 114.516 397.503 0 256 0zm0 472H40V256c0-119.377 96.607-216 216-216 119.377 0 216 96.607 216 216 0 119.377-96.607 216-216 216z"/>
+	</g>
+	<g id="icon-circle">
+		<path d="M437.02 74.98C388.667 26.629 324.38 0 256 0S123.333 26.629 74.98 74.98C26.629 123.333 0 187.62 0 256s26.629 132.667 74.98 181.02C123.333 485.371 187.62 512 256 512s132.667-26.629 181.02-74.98C485.371 388.667 512 324.38 512 256s-26.629-132.667-74.98-181.02zM256 30c56.921 0 108.988 21.161 148.767 56.019l-69.813 69.813c-21.736-17.169-49.168-27.43-78.954-27.43-29.785 0-57.218 10.261-78.953 27.43l-69.813-69.813C147.012 51.161 199.079 30 256 30zm97.598 226c0 53.816-43.782 97.598-97.598 97.598S158.402 309.816 158.402 256s43.782-97.598 97.598-97.598 97.598 43.782 97.598 97.598zM30 256c0-56.922 21.162-108.989 56.021-148.768l69.813 69.813c-17.17 21.736-27.432 49.169-27.432 78.956 0 29.785 10.261 57.218 27.43 78.954l-69.813 69.813C51.161 364.988 30 312.921 30 256zm226 226c-56.922 0-108.989-21.162-148.769-56.021l69.813-69.813c21.736 17.17 49.169 27.431 78.955 27.431s57.219-10.261 78.956-27.432l69.813 69.813C364.989 460.838 312.922 482 256 482zm169.981-77.234l-69.813-69.813c17.169-21.736 27.43-49.168 27.43-78.953 0-29.786-10.261-57.219-27.431-78.955l69.813-69.813C460.838 147.011 482 199.078 482 256c0 56.921-21.161 108.988-56.019 148.766z"/>
+	</g>
+	<g id="icon-step">
+		<path opacity=".87" d="M9.27 0h.57c.44 2.5 1.41 4.79 4.2 5.23.08-1.75.14-3.49.2-5.23h1.62c.16 2.88-.55 6.21 1.58 8.56 1.74 2.84 5.88 1.64 8.02 3.96 1.2 1.43 1.45 3.35 1.95 5.09.65.21 1.94.64 2.59.85V30H0v-6.48c1.54.02 3.08.07 4.63.14-1.07.7-2.15 1.38-3.24 2.04-.06.99-.13 1.98-.21 2.97 9.19.13 18.39.06 27.59.05.05-1.2.11-2.4.17-3.6-6.33-.26-12.67-.01-19.01-.21.59-2.66.99-5.49 2.81-7.65-2.35-1.64-5.01-2.93-6.98-5.05-1.05-1.13.07-2.69.53-3.83C7.75 5.77 9.04 3.03 9.27 0m1.85 5.97c.35 1.32 1.17 1.63 2.44.95-.31-1.27-1.13-1.59-2.44-.95-.74-.54-.74-.54 0 0m-3.14.97c-.07.51-.2 1.54-.26 2.05 2.04 2.45 5.18 3.73 7.75 5.57 2.83 2.24 6.6 1.24 9.91 1.37-.17-1.61-1.27-2.74-2.46-3.7-1.81 1.08-3.86 1.38-5.92 1.33.29-.92.59-1.85.89-2.77-.95.31-1.91.62-2.85.94.25-.85.51-1.7.77-2.55-2.71-.37-5.26-1.38-7.83-2.24m.11 4.98c-.33 1.24 1.56 2.5 2.61 1.82.42-1.25-1.57-2.42-2.61-1.82-.68-.55-.68-.55 0 0m2.61 1.82c1.6 1.59 3.38 3.15 5.55 3.88 2.81.34 5.66.16 8.48.22l.01-.69c-2.53.07-5.08.29-7.6-.08-2.17-1.06-4.06-2.7-6.44-3.33m1.83 5.77c-.13 1.13-.26 2.27-.4 3.4 5.57.69 11.22.46 16.81.16-.07-1.24-.13-2.49-.19-3.73-5.41.18-10.82-.12-16.22.17z"/>
+	</g>
+	<g id="icon-sos">
+		<path d="M444.41 67.706H67.59C30.321 67.706 0 98.027 0 135.296v176.16c0 37.264 30.321 67.58 67.59 67.58h113.587l60.867 60.866c5.854 5.855 15.356 5.857 21.214 0l60.856-60.866H444.41c37.269 0 67.59-30.316 67.59-67.58v-176.16c0-37.269-30.321-67.59-67.59-67.59zM482 311.456c0 20.722-16.863 37.58-37.59 37.58H317.9a15 15 0 00-10.607 4.394l-54.644 54.652-54.652-54.652-.23-.23c-3.582-3.583-8.524-4.963-13.164-4.164H67.59c-20.727 0-37.59-16.858-37.59-37.58v-176.16c0-20.727 16.863-37.59 37.59-37.59h376.82c20.727 0 37.59 16.863 37.59 37.59z"/>
+		<path d="M268.954 127.707h-25.908c-23.368 0-42.379 19.011-42.379 42.379v106.575c0 23.368 19.011 42.379 42.379 42.379h25.908c23.368 0 42.379-19.011 42.379-42.379V170.087c0-23.368-19.011-42.38-42.379-42.38zm12.379 148.954c0 6.826-5.553 12.379-12.379 12.379h-25.908c-6.826 0-12.379-5.553-12.379-12.379V170.087c0-6.826 5.553-12.379 12.379-12.379h25.908c6.826 0 12.379 5.553 12.379 12.379zM128.056 208.374h-25.445c-6.954 0-12.611-5.657-12.611-12.61v-25.445c0-6.954 5.657-12.611 12.611-12.611h50.056c8.284 0 15-6.716 15-15s-6.716-15-15-15h-50.056C79.115 127.707 60 146.823 60 170.318v25.445c0 23.496 19.115 42.61 42.611 42.61h25.445c6.954 0 12.61 5.657 12.61 12.611v25.445c0 6.954-5.657 12.611-12.61 12.611H78c-8.284 0-15 6.716-15 15s6.716 15 15 15h50.056c23.496 0 42.61-19.115 42.61-42.611v-25.445c.001-23.495-19.114-42.61-42.61-42.61zM409.389 208.374h-25.445c-6.954 0-12.61-5.657-12.61-12.61v-25.445c0-6.954 5.657-12.611 12.61-12.611H434c8.284 0 15-6.716 15-15s-6.716-15-15-15h-50.056c-23.496 0-42.61 19.115-42.61 42.611v25.445c0 23.496 19.115 42.61 42.61 42.61h25.445c6.954 0 12.611 5.657 12.611 12.611v25.445c0 6.954-5.657 12.611-12.611 12.611h-50.056c-8.284 0-15 6.716-15 15s6.716 15 15 15h50.056c23.496 0 42.611-19.115 42.611-42.611v-25.445c0-23.496-19.115-42.611-42.611-42.611z"/>
+	</g>
+	<g id="icon-info">
+		<path d="M256 0C114.497 0 0 114.507 0 256c0 141.503 114.507 256 256 256 141.503 0 256-114.507 256-256C512 114.497 397.492 0 256 0zm0 472c-119.393 0-216-96.615-216-216 0-119.393 96.615-216 216-216 119.393 0 216 96.615 216 216 0 119.393-96.616 216-216 216z"/>
+		<path d="M256 214.33c-11.046 0-20 8.954-20 20v128.793c0 11.046 8.954 20 20 20s20-8.955 20-20.001V234.33c0-11.046-8.954-20-20-20z"/>
+		<circle cx="256" cy="162.84" r="27"/>
+	</g>
+	<g id="icon-news">
+		<path d="M20.5 24H3.75A3.754 3.754 0 010 20.25V2.75A2.752 2.752 0 012.75 0h12.5A2.752 2.752 0 0118 2.75V3h3.25A2.752 2.752 0 0124 5.75v14.5c0 1.916-1.444 3.5-3.301 3.723A.724.724 0 0120.5 24zM18 4.5v15.75c0 1.241 1.009 2.25 2.25 2.25s2.25-1.009 2.25-2.25V5.75c0-.689-.561-1.25-1.25-1.25zm-15.25-3c-.689 0-1.25.561-1.25 1.25v17.5a2.252 2.252 0 002.25 2.25h13.502a3.73 3.73 0 01-.752-2.25V2.75c0-.689-.561-1.25-1.25-1.25z"/>
+		<path d="M8.25 9h-4.5A.75.75 0 013 8.25v-4.5A.75.75 0 013.75 3h4.5a.75.75 0 01.75.75v4.5a.75.75 0 01-.75.75zM4.5 7.5h3v-3h-3zM14.25 5.5h-2.5a.75.75 0 010-1.5h2.5a.75.75 0 010 1.5zM14.25 8.5h-2.5a.75.75 0 010-1.5h2.5a.75.75 0 010 1.5zM14.25 12.5H3.75a.75.75 0 010-1.5h10.5a.75.75 0 010 1.5zM14.25 16.25H3.75a.75.75 0 010-1.5h10.5a.75.75 0 010 1.5zM14.25 20H3.75a.75.75 0 010-1.5h10.5a.75.75 0 010 1.5z"/>
+	</g>
+	<g id="icon-detais">
+        <rect width="5" height="5" rx="3"></rect>
+        <rect x="9" width="5" height="5" rx="3"></rect>
+        <rect x="18" width="5" height="5" rx="3"></rect>
+    </g>
+    <g id="icon-place">
+    	<path d="M184.08 0c-74.992 0-136 61.008-136 136 0 24.688 11.072 51.24 11.536 52.36 3.576 8.488 10.632 21.672 15.72 29.4l93.248 141.288c3.816 5.792 9.464 9.112 15.496 9.112s11.68-3.32 15.496-9.104l93.256-141.296c5.096-7.728 12.144-20.912 15.72-29.4.464-1.112 11.528-27.664 11.528-52.36 0-74.992-61.008-136-136-136zM293.8 182.152c-3.192 7.608-9.76 19.872-14.328 26.8l-93.256 141.296c-1.84 2.792-2.424 2.792-4.264 0L88.696 208.952c-4.568-6.928-11.136-19.2-14.328-26.808-.136-.328-10.288-24.768-10.288-46.144 0-66.168 53.832-120 120-120s120 53.832 120 120c0 21.408-10.176 45.912-10.28 46.152z"/>
+		<path d="M184.08 64.008c-39.704 0-72 32.304-72 72s32.296 72 72 72 72-32.304 72-72-32.296-72-72-72zm0 128c-30.872 0-56-25.12-56-56s25.128-56 56-56 56 25.12 56 56-25.128 56-56 56z"/>
+    </g>
+</svg>
+
+<div class="container container--inner">
+
+	<header class="main-header">
+		<div class="main-header__block">
+			<div class="container">
+				<a href="" class="main-header__logo">
+					<img src="img/icons/logo.png" alt="">
+				</a>
+				<div class="main-header__holder">
+				    <div class="main-header__row">
+				    	<div class="main-header__col">
+				    		<svg viewBox="0 0 384 384">
+					            <use xlink:href="#icon-phone" />
+					        </svg>
+					        <p class="main-header__tel">+380 99 999 99 99</p>
+				    	</div>
+
+				    	<div class="main-header__col">
+				    		<svg viewBox="0 0 512 512">
+					            <use xlink:href="#icon-email" />
+					        </svg>
+					        <p class="main-header__mail">info@bfond.ua</p>
+				    	</div>
+				     </div>
+				     <div class="main-header__inner">
+				     	<div class="main-header__socials">
+				     		<a href="#" class="main-header__box">
+				     			<svg viewBox="0 0 512 512">
+						            <use xlink:href="#icon-twitter" />
+						        </svg>
+				     		</a>
+				     		<a href="#" class="main-header__box">
+				     			<svg viewBox="0 0 461 461">
+						            <use xlink:href="#icon-youtube" />
+						        </svg>
+				     		</a>
+				     		<a href="#" class="main-header__box">
+				     			<svg viewBox="0 0 512 512">
+						            <use xlink:href="#icon-instagram" />
+						        </svg>
+				     		</a>
+				     		<a href="#" class="main-header__box">
+				     			<svg viewBox="0 0 512 512">
+						            <use xlink:href="#icon-facebook" />
+						        </svg>
+				     		</a>
+				     	</div>
+				     	<ul>
+					        <li id="qtranslate-3" class="widget qtranxs_widget">
+					            <ul class="language-chooser language-chooser-text qtranxs_language_chooser" id="qtranslate-3-chooser">
+						            <li class="lang-ua active">
+						                <a href="" lang="ua" title="Рус (ua)" class="qtranxs_text qtranxs_text_ua"><span>Укр</span></a>
+						            </li>
+						            <li class="lang-en">
+						             <a href="" lang="en" title="Eng (en)" class="qtranxs_text qtranxs_text_en"><span>Eng</span></a>
+						            </li>
+						        </ul>
+						        <div class="qtranxs_widget_end"></div>
+						    </li>
+						</ul>
+				     </div>
+				</div><!--end main-header__holder-->
+			</div>
+		</div>
+
+		<section class="info__content">
+			<div class="container">
+				<div class="info__elem">
+					<a href="" class="info__item">
+						<svg viewBox="0 0 512 512">
+							<use xlink:href="#icon-help" />
+						</svg>
+						<p class="info__title">Як допомогти</p>
+					</a>
+					<a href="" class="info__item">
+						<svg viewBox="0 0 512 512">
+							<use xlink:href="#icon-circle" />
+						</svg>
+						<p class="info__title">Кому допомогти</p>
+					</a>
+					<a href="" class="info__item">
+						<svg viewBox="0 0 30 30">
+							<use xlink:href="#icon-step" />
+						</svg>
+						<p class="info__title">Next step ukraine</p>
+					</a>
+					<a href="" class="info__item">
+						<svg viewBox="0 0 512 512">
+							<use xlink:href="#icon-sos" />
+						</svg>
+						<p class="info__title">Отримати допомогу</p>
+					</a>
+					<a href="" class="info__item">
+						<svg viewBox="0 0 512 512">
+							<use xlink:href="#icon-info" />
+						</svg>
+						<p class="info__title">Особливий випадок</p>
+					</a>
+					<a href="" class="info__item">
+						<svg viewBox="0 0 24 24">
+							<use xlink:href="#icon-news" />
+						</svg>
+						<p class="info__title">Новини</p>
+					</a>
+				</div><!--end info__elem-->
+			</div>
+		</section><!--end info__content-->
+
+		<div class="main-header__elem">
+			<div class="container">
+				<div class="main-header__content">
+					<div class="main-header__menu">
+			          <div class="mobile-wrap">
+			            <div class="main-nav__toggle">
+			              <span class="line-burger"></span>
+			            </div>
+			          </div>
+			          <ul class="main-header__list">
+			            <li>
+			              <a class="main-header__link main-header__link--active" href="">Головна</a>
+			            </li>
+			            <li>
+			              <a class="main-header__link" href="">Про фонд</a>
+			            </li>
+			            <li>
+			              <a class="main-header__link" href="">Звіти</a>
+			            </li>
+			            <li>
+			               <a class="main-header__link" href="">проекти</a>
+			            </li>
+			            <li>
+			               <a class="main-header__link" href="">Змі</a>
+			            </li>
+			          </ul>
+			        </div>
+				    <div class="main-header__search-wrap">
+					   <input class="main-header__input" type="text" placeholder="Пошук за проектами">
+					   <button class="main-header__button"></button>
+				    </div>
+				</div>
+				
+			</div>
+			
+		</div>
+				
+	</header>
+
+	<section class="banner">
+		<div class="container container--banner">
+			<p class="banner__title">невеликий банер за назвою проекту який адміністратор хоче виділити</p>
+		</div>
+	</section>
+
+	<section class="about">
+		<div class="container">
+			<ul class="breadcrumbs__list"> 
+				<li><a href="#">Головна</a></li>
+				<li>Як допомогти</li>
+			</ul>
+			<h3 class="title title--news">Як допомогти</h3>
+			<div class="about__text">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p> 
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p> 
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+			</div>
+		</div>
+	</section>
+
+	<section class="banner">
+		<div class="container container--elem">
+			<p class="banner__title">невеликий банер за назвою проекту який адміністратор хоче виділити</p>
+		</div>
+	</section>
+
+	<section class="pay">
+		<div class="container container--elem">
+			<div class="pay__wrap">
+				<a href="#" class="pay__item pay__item--card">Сплатити карткою</a>
+				<a href="#" class="pay__item pay__item--block">
+					<span class="pay__text">інше</span>
+					<svg viewBox="0 0 24 5">
+						<use xlink:href="#icon-detais" />
+					</svg>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="help">
+		<div class="container">
+			<div class="help__wrap">
+				<div class="help__item">
+					<label class="help__title">Кому допомогти?</label>
+					<div class="select__wrap" id="select2">
+						<input class="select__placeholder" value="">
+						<ul class="select__list">
+							<li class="select__item">Анна Васильева</li>
+							<li class="select__item">Дмитрий Барс</li>
+							<li class="select__item">Макс Остапчук</li>
+						</ul>
+					</div>
+				    <div class="help__holder">
+					    <div class="help__box">
+						    <input id ="h_1" name="block" type="radio" class="help__input">
+						    <label for="h_1" class="help__label">500</label>
+					    </div>
+					    <div class="help__box">
+						    <input id ="h_2" checked="true" name="block" type="radio" class="help__input">
+						    <label for="h_2" class="help__label">1 000</label>
+					    </div>
+					    <div class="help__box">
+						    <input id ="h_3" name="block" type="radio" class="help__input">
+						    <label for="h_3" class="help__label">2 000</label>
+					    </div>
+					    <div class="help__box">
+						    <input id ="h_4" name="block" type="radio" class="help__input">
+						    <label for="h_4" class="help__label">3 000</label>
+					    </div>
+				    </div>
+				    <div class="help__row help__row--sum">
+				    	<label for="h_sum" class="help__title">Інша сума</label>
+				    	<input id="h_sum" type="text" class="input">
+				    </div>
+				    <div class="help__row help__row--msg">
+				    	<label for="h_msg" class="help__title">Ваші коментарі та побажання</label>
+				    	<textarea id="h_msg" type="text" class="input input--area"></textarea>
+				    </div>
+				</div>
+				<div class="help__item">
+					<div class="help__row">
+				    	<label for="h_name" class="help__title">Як вас звуть?</label>
+				    	<input id="h_name" type="text" class="input">
+				    </div>
+				    <div class="help__row">
+				    	<label for="h_email" class="help__title">E-mail</label>
+				    	<input id="h_email" type="text" class="input">
+				    </div>
+				    <div class="help__part">
+					    <div class="help__block">
+					    	<div class="help__col">
+					    		<input id="h_letter" type="checkbox" checked="true" class="help__field">
+					    		<label for="h_letter" class="help__text">Хочу отримувати листи від фонду</label>
+					    	</div>
+					    	<div class="help__col">
+					    		<input id="h_processing" type="checkbox" class="help__field">
+					    		<label for="h_processing" class="help__text">Я приймаю <a href="">публічну оферту</a> та <a href="">даю згоду</a> на обработку персональних данних</label>
+					    	</div>
+					    </div>
+					    <div class="help__desc">
+					    	<p>Інформація про пожертву надходить до фонду протягом чотирьох банківських днів</p>
+					    </div>
+					</div>
+				    <button class="btn btn--help" disabled="">К оплате</button>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+
+	<section class="mailing mailing--inner">
+		<div class="container">
+			<div class="mailing__wrap">
+				<div class="mailing__desc">
+					<p><span>Підпишіться на розсилку нашого фонду</span>
+					Залиште свою адресу, щоб отримувати кожен
+					тиждень наші новини та статті.
+					</p>
+				</div>
+				<form action="" class="mailing__inner">
+					<input type="text" class="mailing__input" placeholder="Email">
+					<button class="btn btn--mailing">Подписаться</button>
+				</form>
+			</div>
+		</div>
+	</section>
+ 
+	<footer class="main-footer">
+		<div class="container">
+			<div class="main-footer__wrap">
+				<div class="main-footer__item">
+					<div class="main-footer__block">
+						<h3 class="main-footer__title">revived soldiers ukraine</h3>
+						<p class="main-footer__text">Допомогаємо допомогати</p>
+						<div class="main-footer__contacts">
+							<p class="main-footer__data">+380 99 999 99 99</p>
+							<p class="main-footer__data">info@bfond.ru</p>
+						</div>
+					</div>
+					<div class="main-footer__socials">
+						<a href="" class="main-footer__box">
+							<svg viewBox="0 0 512 512">
+						        <use xlink:href="#icon-facebook" />
+						    </svg>
+						</a>
+						<a href="#" class="main-footer__box">
+				     		<svg viewBox="0 0 512 512">
+						        <use xlink:href="#icon-instagram" />
+						    </svg>
+				     	</a>
+				     	<a href="#" class="main-footer__box">
+				     		<svg viewBox="0 0 461 461">
+						        <use xlink:href="#icon-youtube" />
+						    </svg>
+				     	</a>
+				     	<a href="#" class="main-footer__box">
+				     		<svg viewBox="0 0 512 512">
+						         <use xlink:href="#icon-twitter" />
+						    </svg>
+				     	</a>
+					</div>
+					<div class="main-footer__desc">
+						<p>Наш фонд - це союз нормальних людей, які не можуть спокійно продовжувати свій шлях по берегу, коли в воді хтось тоне. Порятунок світів - заняття не для смертних. Але якщо саме ваша доброта врятує хоча б одну людину, хто знає, може, ви і відчуєте себе трішечки Богом.
+						<p>+380 99 999 99 99 дзвінок по Україні безкоштовний.
+                        40209, Київ, а / я 110
+                        blagfond@blagfond.ua</p>
+                        <p>Благодійний фонд «БЛАГФОНД» використовує сайт blagfond.ua для збору неоподатковуваних пожертв, ЕГРОПОУ 1097799029580</p>
+					</div>
+				</div>
+				<div class="main-footer__item">
+					<div class="main-footer__holder">
+						<div class="main-footer__col">
+							<h4 class="main-footer__subtitle">Як допомогти</h4>
+							<div class="main-footer__elem">
+								<a href="">допомогти грошима</a>
+								<a href="">як допомогти з-за кордону</a>
+								<a href="">договір пожертви </a>
+								<a href="">кому допомогти</a>
+							</div>
+						</div>
+						<div class="main-footer__col">
+							<a href="" class="main-footer__subtitle">Особливий випадок</a>
+						</div>
+						<div class="main-footer__col">
+							<a href="" class="main-footer__subtitle">Отримати допомогу</a>
+						</div>
+						<div class="main-footer__col">
+							<h4 class="main-footer__subtitle">Звіти</h4>
+							<div class="main-footer__elem">
+								<a href="">«ви допомогли, спасибі!»</a>
+								<a href="">зроблено</a>
+								<a href="">бюлетень</a>
+								<a href="">Подяки</a>
+								<a href="">Куди пішли ваші гроші</a>
+								<a href="">річні звіти</a>
+								<a href="">розсилки фонду</a>
+							</div>
+						</div>
+						<div class="main-footer__col">
+							<h4 class="main-footer__subtitle">Національний рдкм</h4>
+							<div class="main-footer__elem">
+								<a href="">як стати донором кісткового мозку</a>
+								<a href="">Сертифікат на типування</a>
+								<a href="">кров 5</a>
+							</div>
+						</div>
+
+						<div class="main-footer__col">
+							<h4 class="main-footer__subtitle">Про фонд</h4>
+							<div class="main-footer__elem">
+								<a href="">команда благфонда</a>
+								<a href="">Установчі документи</a>
+								<a href="">Подарункові сертифікати - благодійний магазин</a>
+								<a href="">Контакти і реквізити</a>
+								<a href="">Політика конфіденційності</a>
+								<a href="">Користувача угода</a>>
+							</div>
+						</div>
+
+						<div class="main-footer__col">
+							<h4 class="main-footer__subtitle">Клініки</h4>
+							<div class="main-footer__elem">
+								<a href="">українські клініки</a>
+								<a href="">зарубіжні клініки</a>
+							</div>
+						</div>
+
+						<div class="main-footer__col">
+							<h4 class="main-footer__subtitle">Фонд в соц.сетях</h4>
+							<div class="main-footer__elem">
+								<a href="">Facebook благфонда</a>
+								<a href="">Благфонд в telegram</a>
+								<a href="">Youtube благфонда</a>
+								<a href="">Instagram благфонда</a>
+								<a href="">Відео головних героїв</a>
+							</div>
+						</div>
+
+					</div><!--end main-footer__holder-->
+				</div><!--end main-footer__item-->
+			</div>
+		</div>
+	</footer>
+</div>
+
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

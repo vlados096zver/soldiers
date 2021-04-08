@@ -1,0 +1,268 @@
+@import 'responsive'
+
+.single
+	&__wrap	
+		display: flex
+		flex-wrap: wrap
+
+	&__item
+		margin-bottom: 55px
+		+media(md)
+			margin-bottom: 40px
+
+		&--content
+			width: calc(100% - 300px)
+			padding-right: 40px
+			+media(md)
+				width: 100%
+				padding-right: 0px
+
+		&--aside
+			width: 300px
+			align-self: end
+			+media(md)
+				width: 100%
+				max-width: 450px
+				margin: 0 auto
+				margin-bottom: 40px
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		padding-bottom: 12px
+		li
+			display: flex
+			user-select: none
+			cursor: default
+			margin-bottom: 20px
+			&:not(:last-child)
+				margin-right: 24px
+			a
+				transition: 0.3s color
+				&:hover
+					color: #140f26
+
+			&:nth-child(1),
+			&:nth-child(3)
+				+media(sm)
+					display: none
+
+		li, li a
+			font-size: 18px
+			color: #808080
+
+	&__arrow
+		display: block
+		position: relative
+		width: 20px
+		height: 20px
+		margin-right: 24px
+		&:after
+			position: absolute
+			content: ' '
+			width: 14px
+			height: 14px
+			top: calc(50% - 7px)
+			left: calc(50% - 5px)
+			border-left: 2px solid #41307e
+			border-top: 2px solid #41307e
+			transform: rotate(-45deg)
+			transition: 0.3s border
+		&--dir_right
+			transform: scaleX(-1)
+			margin-right: 0px
+			margin-left: 24px
+
+		&:hover
+			&:after
+				border-color: #140f26
+
+	&__fio	
+		font-size: 30px
+		line-height: 1.2
+		color: #333333
+		text-transform: uppercase
+		padding-bottom: 20px
+		font-weight: 700
+		+media(sm)
+			font-size: 24px
+
+	&__inner
+		display: flex
+		align-items: center
+
+	&__age
+		font-size: 16px
+		color: #333333
+		margin-right: 22px
+		margin-bottom: 15px
+
+	&__container
+		display: flex
+		align-items: center
+		margin-bottom: 15px
+		svg
+			display: block
+			width: 20px
+			height: 20px
+			fill: #41307e
+			margin-right: 20px	
+
+	&__place
+		font-size: 16px
+		color: #333333
+
+	&__row
+		display: flex
+		flex-wrap: wrap
+		background-color: #f2f2f2
+		padding: 30px 40px
+		padding-bottom: 25px
+		margin-bottom: 40px
+		+media(lgxs)
+			padding: 30px 20px
+		+media(md)
+			padding: 25px 20px
+
+	&__col
+		&--image
+			width: 258px
+			+media(sm)
+				width: 100%
+				max-width: 500px
+				margin: 0 auto
+				margin-bottom: 35px
+			img
+				display: block
+				width: 100%
+
+		&--block
+			width: calc(100% - 258px)
+			padding-left: 44px
+			+media(mdx)
+				padding-left: 20px
+			+media(sm)
+				width: 100%
+				padding-left: 0px
+
+	&__text
+		padding-bottom: 50px
+		+media(md)
+			padding-bottom: 40px
+		p
+			font-size: 16px
+			line-height: 1.5
+
+	&__desc
+		margin-bottom: 24px
+		p
+			font-size: 16px
+			line-height: 1.5
+			&:not(:last-child)
+				padding-bottom: 1.8em
+
+	&__pic
+		margin-bottom: 42px
+		+media(md)
+			max-width: 500px
+			margin: 0 auto
+			margin-bottom: 40px
+		img
+			display: block
+			width: 100%
+
+	&__info
+		font-size: 18px
+		color: #333333
+		padding-bottom: 18px
+		font-weight: 700
+
+	&__ask
+		font-size: 16px
+		color: #333333
+		padding-bottom: 30px
+
+	&__holder
+		margin-bottom: 46px
+		h1
+			font-size: 24px
+
+		h2
+			font-size: 22px
+
+		h3
+			font-size: 20px
+
+		h4
+			font-size: 18px
+
+		h5
+			font-size: 16px
+
+		h6
+			font-size: 14px
+
+		h1, h2, h3, h4, h5, h6
+			line-height: 1.5
+			padding-bottom: 35px
+			font-weight: 700
+
+		ul
+			margin: 1em 0
+			li
+				list-style-type: disc
+				list-style-position: inside
+				line-height: 1.7
+				margin-bottom: 5px
+				padding-left: 20px
+
+		ol
+			margin: 1em 0
+			li
+				list-style-type: decimal
+				list-style-position: inside
+				line-height: 1.7
+				margin-bottom: 5px
+				padding-left: 20px
+
+		p
+			font-size: 16px
+			line-height: 1.5
+			&:not(:last-child)
+				padding-bottom: 1.8em
+
+	&__contain
+		background-color: #f2f2f2
+		padding: 30px
+		padding-bottom: 0px
+
+	.content__holder
+		flex-direction: column
+
+	.content__item
+		width: 100%
+		padding: 0px
+
+	.content__desc 
+		padding-bottom: 30px
+		p
+			font-size: 16px
+			span
+				font-size: 16px
+
+	.content__form
+		flex-direction: column
+
+	.btn--start
+		margin: 0px
+		margin-bottom: 20px
+
+	.btn--start, .btn--clear
+		max-width: 100%
+
+	.content__title
+		font-size: 18px
+		font-weight: normal
+		+media(sm)
+			font-size: 17px

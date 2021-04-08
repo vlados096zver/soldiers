@@ -1,0 +1,267 @@
+@import 'responsive'
+
+body
+	margin: 0
+	padding: 0
+	width: 100%
+	overflow-x: hidden
+	color: #333333
+	background-color: #fff
+	font-size: 16px
+	line-height: 1.2
+	font-weight: normal
+	font-style: normal
+	font-family: "Montserrat"
+
+img
+	max-width: 100%
+	height: auto
+
+.svg
+	&-about
+		display: none
+
+.container
+	max-width: 1230px
+	width: 100%
+	margin: 0 auto
+	padding: 0 15px
+	&--inner
+		max-width: 100%
+		padding: 0px
+
+	&--elem
+		max-width: 1200px
+		padding: 0px
+
+	&--block
+		max-width: 1270px
+
+	&--data
+		max-width: 550px
+
+	&--banner
+		max-width: 1200px
+		padding: 0px
+
+		img
+			display: block
+			margin: 0 auto
+
+.input
+	display: block
+	width: 100%
+	font-size: 16px
+	background-color: #eeeeee
+	color: #808080
+	border: none
+	outline: none
+	border-radius: 5px
+	padding: 13px 15px
+	&.form-fail
+		border-color: #b00
+
+	&.form-done
+		border-color: #90ee90
+
+	&--area
+		min-height: 130px
+		resize: none	
+
+	&--data-area
+		min-height: 170px
+		background-color: #fff
+		border: 2px solid #eeeeee
+		resize: none
+
+.title
+	font-size: 36px
+	color: #41307e
+	text-transform: uppercase
+	&--news
+		font-weight: 700
+
+	&--sponsors
+		font-weight: 200
+
+.btn
+	display: block
+	width: 100%
+	cursor: pointer
+	font: inherit
+	font-size: 16px
+	color: #41307e
+	border: none
+	outline: none
+	text-align: center
+	text-transform: uppercase
+	font-weight: 700
+	transition: 0.3s background-color, 0.3s color, 0.3s border
+	&--help
+		color: #fff
+		border-radius: 5px
+		background-color: #41307e
+		text-transform: none
+		padding: 13px 5px
+		margin-bottom: 20px
+		+media(md)
+			order: 4
+
+	&--help[disabled]
+		cursor: default
+		opacity: 0.5
+		text-decoration: line-through
+
+	&--help:not(:disabled)
+		&:hover
+			background-color: #140f26
+
+	&--news
+		width: auto
+		background-color: #fff
+		color: #41307e
+		padding: 0px
+		margin-bottom: 15px
+		&:first-child
+			margin-right: 30px
+		&:hover
+			color: #140f26
+
+	&--mailing
+		max-width: 245px
+		background-color: #41307e
+		color: #fff
+		border-radius: 5px
+		text-transform: none
+		padding: 13px 5px
+		margin-bottom: 22px
+		+media(xs)
+			max-width: 100%
+
+	&--mailing[disabled]
+		cursor: default
+		opacity: 0.5
+		text-decoration: line-through
+
+	&--mailing:not(:disabled)
+		&:hover
+			background-color: #140f26
+
+	&--start,
+	&--clear
+		max-width: 216px
+		border-radius: 5px
+		border: 2px solid #41307e
+		padding: 8px 10px
+		padding-bottom: 9px
+		margin-bottom: 20px
+		transition: 0.3s background-color, 0.3s border, 0.3s color
+		+media(smx)
+			max-width: 350px
+
+	&--start
+		color: #fff
+		background-color: #41307e
+		margin-left: 20px
+		margin-right: 22px
+		+media(smx)
+			margin: 0px
+			margin-bottom: 20px
+		&:hover
+			background-color: #140f26
+			border-color: #140f26
+				
+	&--clear
+		color: #41307e
+		background-color: transparent
+		&:hover
+			background-color: #41307e
+			color: #fff
+
+	&--pay,
+	&--question
+		color: #fff
+		background-color: #41307e
+		border-radius: 5px
+		text-transform: none
+		padding: 13px 5px
+		margin-top: 48px
+
+	&--pay[disabled],
+	&--question[disabled]
+		cursor: default
+		opacity: 0.5
+		text-decoration: line-through
+
+	&--pay:not(:disabled),
+	&--question:not(:disabled)
+		&:hover
+			background-color: #140f26
+
+	&--result
+		max-width: 216px
+		color: #fff
+		background-color: #41307e
+		text-transform: none
+		border-radius: 5px
+		padding: 10px 5px
+		padding-bottom: 11px
+		&:hover
+			background-color: #140f26
+
+	&--team
+		width: auto
+		display: inline-block
+		text-align: left
+		&:hover
+			color: #140f26
+
+.breadcrumbs
+	&__list
+		margin-bottom: 22px
+		li
+			display: inline-block
+			text-transform: uppercase
+			a
+				position: relative
+				margin-right: 7px
+				transition: 0.3s color
+				&:hover
+					
+				&:after
+					margin-left: 9px
+					content: '|'
+		li, a
+			font-size: 12px
+			line-height: 1.3
+			color: #41307e
+
+.nav-links
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	margin: 0 -12px
+
+.navigation 
+	margin: 0 auto
+	text-align: center
+	padding-top: 12px
+	padding-bottom: 45px
+	+media(md)
+		padding-bottom: 30px
+	a, span
+		text-decoration: none
+		font-size: 18px
+		line-height: 1.5
+		color: #808080
+		font-weight: 700
+
+	.page-numbers
+		margin: 0 12px
+		margin-bottom: 5px
+		transform: 0.3s color
+		&.current
+			color: #41307e
+
+		&:hover:not(.current)
+			color: #140f26

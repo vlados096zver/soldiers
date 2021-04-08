@@ -1,0 +1,61 @@
+
+.custom-range
+	--persent-min: 0%
+	--persent-max: 0%
+	--width-line: 10px
+	--width-pen: 1px
+	--pen-min: calc(var(--persent-min) - var(--width-pen) / 2)
+	--pen-max: calc(var(--persent-max) - var(--width-pen) / 2)
+	
+	position: relative
+	padding: 10px 12px
+	outline: none
+	&:before
+		content: ""
+		position: absolute
+		top: 50%
+		left: 4px
+		right: 4px
+		transform: translatey(-50%)
+		height: var(--width-line)
+		border-radius: calc(var(--width-line) / 2)
+		background: #c4c4c4
+		pointer-events: none
+
+
+	&__inner
+		display: flex
+		justify-content: space-between
+
+
+	&__line 
+		position: relative
+		height: var(--width-line)
+		background: linear-gradient(to right, #c4c4c4 var(--pen-min), #41307e var(--pen-min), #41307e var(--pen-max), #c4c4c4 var(--pen-max))
+		pointer-events: none
+		
+		&:before, &:after 
+			content: ""
+			position: absolute
+			top: 50%
+			width: var(--width-pen)
+			height: calc(var(--width-line) * 2)
+			transform: translatey(-50%)
+			background: #333
+			pointer-events: none
+		
+		&:before 
+			left: var(--pen-min)
+		
+		&:after 
+			left: var(--pen-max)
+
+	&__min-value, 
+	&__max-value 
+		border: none
+		color: #41307e
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button 
+			-webkit-appearance: none
+		
+		-moz-appearance: textfield

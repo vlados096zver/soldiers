@@ -1,0 +1,149 @@
+@import 'responsive'
+
+.help
+	background-color: #f4f4f4
+	padding-top: 60px
+	padding-bottom: 32px
+	&__wrap
+		display: flex
+		background-color: #fff
+		padding: 30px
+		padding-bottom: 20px
+		+media(md)
+			flex-direction: column
+		+media(sm)
+			padding: 25px 20px
+
+	&__item
+		width: calc(100% / 2 - 40px)
+		margin: 0 20px
+		+media(md)
+			display: contents
+			width: 100%
+			margin: 0px
+
+	&__title
+		cursor: pointer
+		user-select: none
+		display: inline-block
+		font-size: 16px
+		color: #808080
+		padding-bottom: 12px
+		font-weight: normal
+
+	&__holder
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -11px
+		+media(mini)
+			margin: 0px
+
+	&__box
+		width: calc(100% / 2 - 22px)
+		margin: 0 11px
+		margin-bottom: 20px
+		+media(mini)
+			width: 100%
+			margin: 0px
+			margin-bottom: 20px
+
+	&__input
+		display: none
+		&:checked + .help__label
+			background-color: #41307e
+			color: #fff
+			border-color: #41307e
+
+	&__label
+		cursor: pointer
+		user-select: none
+		display: block
+		font-size: 18px
+		color: #000000
+		text-align: center
+		border: 1px solid #000000
+		border-radius: 5px
+		background-color: #ffffff
+		padding: 11px
+		font-weight: 700
+		transition: 0.3s background-color, 0.3s color, 0.3s border
+
+	&__row
+		margin-bottom: 20px
+		&--msg
+			+media(md)
+				order: 2
+
+	&__elem
+		display: block
+		width: 100%
+		font-size: 16px
+		color: #808080
+		background-color: #eeeeee
+		border: none
+		border-radius: 5px
+		outline: none	
+		padding: 13px 15px
+		&--msg
+			min-height: 130px
+			resize: none
+
+	&__part
+		+media(md)
+			order: 3
+
+	&__block
+		padding: 10px 0
+
+	&__col
+		margin-bottom: 10px
+
+	&__field
+		display: none
+		&:checked + .help__text:before
+			opacity: 1
+
+	&__text
+		display: inline-block
+		cursor: pointer
+		user-select: none
+		position: relative
+		font-size: 16px
+		line-height: 1.8
+		color: #808080
+		padding: 8px 0
+		padding-left: 52px
+		&:after,
+		&:before
+			position: absolute
+			content: ' '
+
+		&:after
+			top: calc(50% - 16px)
+			left: 0px
+			width: 32px
+			height: 32px
+			border-radius: 5px
+			border: 2px solid #808080
+
+		&:before
+			top: 50%
+			left: 10px
+			width: .7em
+			height: 1.1em
+			font-size: 12px
+			border-color: #41307e
+			border-style: solid
+			border-width: 0 .25em .25em 0
+			transform: rotate(45deg) translate(-50%,-50%)
+			opacity: 0
+			transition: 0.3s opacity
+		a
+			color: #41307e
+
+	&__desc
+		padding-bottom: 35px
+		p
+			font-size: 16px
+			line-height: 1.5
+			color: #808080
